@@ -1,0 +1,17 @@
+<div class="section">
+  <button class="button mb-2" type="button" (click)="start()">Start</button>
+
+  <div class="mb-2">User: {{ user | json }}</div>
+  <div class="mb-2">UserInfo: {{ userInfo | json }}</div>
+  <div class="mb-2">MailInfo: {{ mailInfo | json }}</div>
+
+  <ng-container *ngIf="errors?.length > 0">
+    <div class="container">ERRORS
+      <ng-container *ngFor="let error of errors">
+        <div>{{ error }}</div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>
+
+
